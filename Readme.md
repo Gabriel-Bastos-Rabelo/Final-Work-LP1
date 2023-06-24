@@ -1,51 +1,61 @@
-# Readme: Efficient Parcel Delivery
-
 ## About
 
-Final project of the programming language I subject at the Federal University of Maranhão. In this work our group was responsible for developing an algorithm for the knapsack problem, a classic optimization problem, for this problem we used a solution with a recursive structure.
-
-This is a quick guide to explain how to use the "Efficient Parcel Delivery" application made in C. The program solves the classic Traveling Salesman Problem, in which a delivery person needs to find the most efficient route among several cities, delivering all parcels, and returning to their starting point.
-
-## How to Use
-
-1. Clone the repository: 
-bash
-$ git clone https://github.com/Gabriel-Bastos-Rabelo/Final-Work-LP1.git 
-or https://github.com/GabrielBeloDev/Final-Work-LP1.git
-
-2. Navigate into the project directory: `cd efficient-parcel-delivery`
-3. Compile the source code: `gcc main.c -o delivery`
-4. Run the program with the input file: `./delivery input.txt`
-
-## Input File Format
-
-The input file should be a text file (.txt) containing the distances between all cities in an adjacency matrix. Each line represents a city, and each space-separated number represents the distance to another city. For example:
-
-
-5
-0 10 8 9 7
-10 0 5 6 8
-8 5 0 7 6
-9 6 7 0 10
-7 8 6 10 0
-
-
-In this example, the distance from city 1 to city 2 is 2, and the distance from city 3 to city 4 is 8.
-
-## Program Output
-
-The program will print out the sequence of cities that the delivery person should visit to obtain the most efficient route. The output will be a list of space-separated numbers, where each number represents the index of the city in the input file. The starting point is always city 0.
-
-For example, a possible output could be: `0 1 3 2 0`, which means that the delivery person should start at city 0, then go to city 1, then to city 3, then to city 2, and finally return to city 0.
+Final project of the programming language I subject at the Federal University of Maranhão. In this work our group(Gabriel Bastos,Gabriel Belo and Joao Felipe) was responsible for developing an algorithm for the knapsack problem, a classic optimization problem, for this problem we used a solution with a recursive structure.
 
 ## Problem
 
-<h1 align="center"><img src="https://i.postimg.cc/tCWRSjc6/Captura-de-tela-de-2023-06-21-09-50-18.png"/></h1>
+The knapsack problem is a classic problem in combinatorial optimization. We are given a set of items, each with a weight and a value, and we need to determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+
+In this project, we are specifically dealing with the 0/1 knapsack problem, which restricts the number of each items to zero or one.
+
+## How to Run
+
+1. Clone the project: 
+```bash
+$ git clone https://github.com/Gabriel-Bastos-Rabelo/Final-Work-LP1.git or https://github.com/GabrielBeloDev/Final-Work-LP1.git
+```
+2. Navigate to the project directory.
+3. Compile the C code.
+```bash
+$ gcc -o knapsack knapsack.c
+```
+4. Run the executable.
+```bash
+$ ./knapsack
+```
+
+## Instance Reading Example
+
+The program reads the instance from a file. The instance must be formatted as follows:
+
+1. The first line contains two integers, the number of items `n` and the maximum weight `W`.
+2. The next `n` lines each contain two integers, the value and weight of each item.
+
+Example:
+```
+5 15
+12 4
+2 2
+1 1
+1 2
+4 10
+```
+
+This instance represents a knapsack problem with 5 items and a maximum weight of 15. The items have values and weights as follows: (12, 4), (2, 2), (1, 1), (1, 2), (4, 10).
+
+The instance file should be located in the same directory as the executable and should be named `instance.txt`.
 
 ## How to Contribute
 
-If you found a bug or would like to suggest a new feature, feel free to open an issue or a pull request!
+If you want to contribute to this project, you can make a pull request. 
 
-## License
+1. Fork the repository.
+2. Create a new branch for your features.
+3. Push your changes to your branch.
+4. Submit a pull request from your branch to the master branch in the original repository.
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+We appreciate any contributions, whether they are small typo fixes or new features.
+
+For more details, check out the GitHub documentation on [contributing to a project](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests).
+
+![Problem Example](https://i.postimg.cc/tCWRSjc6/Captura-de-tela-de-2023-06-21-09-50-18.png)
