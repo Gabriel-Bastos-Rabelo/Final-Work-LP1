@@ -1,12 +1,12 @@
 ## About
 
-Final project of the programming language I subject at the Federal University of Maranhão. In this work our group(Gabriel Bastos,Gabriel Belo and Joao Felipe) was responsible for developing an algorithm for the knapsack problem, a classic optimization problem, for this problem we used a solution with a recursive structure.
+Final project of the programming language I subject at the Federal University of Maranhão. In this work our group(Gabriel Bastos,Gabriel Belo and Joao Felipe) was responsible for developing an algorithm for the knapsack problem, a classic optimization problem, for this problem we used a solution with dynamic programming.
 
 ## Problem
 
 The knapsack problem is a classic problem in combinatorial optimization. We are given a set of items, each with a weight and a value, and we need to determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
 
-In this project, we are specifically dealing with the 0/1 knapsack problem, which restricts the number of each items to zero or one.
+
 
 ## How to Run
 
@@ -17,11 +17,11 @@ $ git clone https://github.com/Gabriel-Bastos-Rabelo/Final-Work-LP1.git or https
 2. Navigate to the project directory.
 3. Compile the C code.
 ```bash
-$ gcc -o knapsack knapsack.c
+$ gcc -o main main.c
 ```
 4. Run the executable.
 ```bash
-$ ./knapsack
+$ ./main
 ```
 
 ## Instance Reading Example
