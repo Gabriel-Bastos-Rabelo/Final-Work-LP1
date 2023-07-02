@@ -45,8 +45,8 @@ int main(){
     // BOTAMOS UM CONTADOR NA LEITURA DO ARQUIVO, PARA QUE A PRIMEIRA LINHA SEJA LIDA DIFERENTE
     // DAS DEMAIS, JÁ QUE É NELA QUE CONTÉM O NÚMERO DE ITENS E A CAPACIDADE MÁXIMA DA MOCHILA
     int cont = 0;
-     while (feof(arquivo) == 0) {
-         fscanf(arquivo, "%d %d", &num1, &num2);
+     while (fscanf(arquivo, "%d %d", &num1, &num2) == 2) {
+        
          if(cont == 0){
              numero_itens = num1;
              maxCap = num2;
@@ -92,9 +92,9 @@ void problemaMochila(int maxCap, int *pesos, int *valores, int n)
    int i, cap;
    int **K;
    //ALOCAÇÃO DE MEMÓRIA PARA A TABELA K COM NUMERO DE COLUNAS "n" E LINHAS "maxCap"
-   K = (int**)malloc(sizeof(int*)*n);
+   K = (int**)malloc(sizeof(int*)*(n+1));
    for (i = 0; i <= n; i++)
-        K[i] = (int*)malloc(sizeof(int)*maxCap);
+        K[i] = (int*)malloc(sizeof(int)*(maxCap+1));
 
    // CONSTRÓI TABELA K
    for (i = 0; i <= n; i++)
